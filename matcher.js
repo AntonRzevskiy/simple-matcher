@@ -52,6 +52,8 @@ class Matcher {
 
     match( string ) {
 
+        this.relevance = [];
+
         let mostRelevance = 0, curRelevance,
             current, regexp,
             i = 0;
@@ -120,7 +122,6 @@ class Matcher {
             this.relevance[i].fn.call( context, args );
         }
 
-        this.relevance = [];
     }
 
 
